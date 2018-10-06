@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <!-- LinearLayout for first team -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/EditText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/hint"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="30dp"
+                android:inputType="textCapCharacters"
+                android:fontFamily="casual"/>
+
+            <TextView
+                android:id="@+id/scoreGoalsA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goalsScore"
+                android:layout_marginTop="23dp"
+                style="@style/TextViews"
+               />
+
+            <TextView
+                android:id="@+id/scoreFoulsA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/foulsScore"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreYellowCardsA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yellowCards"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreRedCardsA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/redCards"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreOffsidesA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offSidesScore"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreCornersA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cornersScore"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+
+        </LinearLayout>
+
+
+        <!-- LinearLayout for final score -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text = "@string/score"
+                android:textSize="20sp"
+                android:layout_marginTop="23dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goals_TextView"
+                style="@style/FinalScore"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fouls_TextView"
+                style="@style/FinalScore"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yellowCards_TextView"
+                style="@style/FinalScore"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/redCards_TextView"
+                style="@style/FinalScore"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offSides_TextView"
+                style="@style/FinalScore"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/corners_TextView"
+                style="@style/FinalScore"/>
+
+
+        </LinearLayout>
+
+
+        <!-- LinearLayout for second team -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/EditText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="8dp"
+                android:inputType="textCapCharacters"
+                android:fontFamily="casual"
+
+                />
+
+            <TextView
+                android:id="@+id/scoreGoalsB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goalsScore"
+                style="@style/TextViews"
+                android:layout_marginTop="23dp"/>
+
+
+            <TextView
+                android:id="@+id/scoreFoulsB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/foulsScore"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreYellowCardsB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yellowCards"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreRedCardsB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/redCards"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreOffsidesB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offSidesScore"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+            <TextView
+                android:id="@+id/scoreCornersB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cornersScore"
+                android:layout_marginTop="16dp"
+                style="@style/TextViews"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/reset"
+        android:fontFamily="casual"
+        />
+
+
+</RelativeLayout>

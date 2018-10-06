@@ -1,0 +1,45 @@
+<resources>
+
+
+    <string name="app_name">Football Counter</string>
+
+
+    <!-- Display the content of EditText-->
+    <string name="hint">Team 1</string>
+    <string name="hint2">Team 2</string>
+
+
+
+    <!-- Display the name of Score-->
+    <string name="score">Score</string>
+
+    <!--
+       Displays 0 score for all teams.
+    -->
+    <string name="goalsScore">0</string>
+    <string name="foulsScore">0</string>
+    <string name="yellowCards">0</string>
+    <string name="redCards">0</string>
+    <string name="offSidesScore">0</string>
+    <string name="cornersScore">0</string>
+
+    <!--
+       Displays all fields of final score.
+    -->
+    <string name="finalScore">Final Score</string>
+    <string name="goals_TextView">Goals</string>
+    <string name="fouls_TextView">Fouls</string>
+    <string name="yellowCards_TextView">Yellow Cards</string>
+    <string name="redCards_TextView">Red Cards</string>
+    <string name="offSides_TextView">Offsides</string>
+    <string name="corners_TextView">Corners</string>
+
+    <!-- Name of reset button-->
+    <string name="reset">Reset</string>
+
+
+
+
+
+
+</resources>
