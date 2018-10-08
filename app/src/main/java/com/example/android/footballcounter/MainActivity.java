@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     int redCardsA = 0;
     int offsidesA = 0;
     int cornersA = 0;
-
     int goalsB = 0;
     int foulsB = 0;
     int yellowCardsB = 0;
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     // Declarations variables
     EditText editText1;
     EditText editText2;
-
 
     // Declarations variables
     TextView goalsForTeamA;
@@ -47,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     TextView redCardsForTeamB;
     TextView offsidesForTeamB;
     TextView cornersForTeamB;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 displayScore(offsidesA,offsidesForTeamA);
             }
         });
+
         // Get id of TextView cornersForTeamA.
         cornersForTeamA = findViewById(R.id.scoreCornersA);
         // Set onClickListener method on TextView.
@@ -240,12 +238,9 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 resetScore();
             }
         });
-
-
     }
 
     //Check the score on each category if is greater than other score, set that score to black color.
@@ -293,10 +288,8 @@ public class MainActivity extends AppCompatActivity {
         displayScore(offsidesB,offsidesForTeamB);
         displayScore(cornersB,cornersForTeamB);
 
-
         editText1 = findViewById(R.id.EditText1);
         editText2 = findViewById(R.id.EditText2);
-
         editText1.setText("");
         editText2.setText("");
 
