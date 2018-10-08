@@ -13,8 +13,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Declarations and initialize variables
-    int goalsA = 0, foulsA = 0, yellowCardsA = 0, redCardsA = 0, offsidesA = 0, cornersA;
-    int goalsB = 0, foulsB = 0, yellowCardsB = 0, redCardsB = 0, offsidesB = 0, cornersB;
+    int goalsA = 0;
+    int foulsA = 0;
+    int yellowCardsA = 0;
+    int redCardsA = 0;
+    int offsidesA = 0;
+    int cornersA = 0;
+
+    int goalsB = 0;
+    int foulsB = 0;
+    int yellowCardsB = 0;
+    int redCardsB = 0;
+    int offsidesB = 0;
+    int cornersB = 0;
 
     // Declarations variables
     EditText editText1;
@@ -50,25 +61,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 goalsA += 1;
-
                 //Check the score on each category if is greater than other score, set that score to black color.
-
-                if (goalsA > goalsB) {
-                    goalsForTeamA.setTextColor(Color.BLACK);
-                    goalsForTeamB.setTextColor(Color.GRAY);
-                } else if (goalsA == goalsB) {
-
-                    goalsForTeamA.setTextColor(Color.BLACK);
-                    goalsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    goalsForTeamA.setTextColor(Color.GRAY);
-                    goalsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayGoalsTeamA(goalsA);
+                setTextColor(goalsA, goalsB, goalsForTeamA, goalsForTeamB);
+                //Display score on TextView.
+                displayScore(goalsA,goalsForTeamA);
 
             }
         });
@@ -81,20 +78,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 foulsA += 1;
-                if (foulsA > foulsB) {
-                    foulsForTeamA.setTextColor(Color.BLACK);
-                    foulsForTeamB.setTextColor(Color.GRAY);
-                } else if (foulsA == foulsB) {
-
-                    foulsForTeamA.setTextColor(Color.BLACK);
-                    foulsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    foulsForTeamA.setTextColor(Color.GRAY);
-                    foulsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayFoulsTeamA(foulsA);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(foulsA, foulsB, foulsForTeamA, foulsForTeamB);
+                //Display score on TextView.
+                displayScore(foulsA,foulsForTeamA);
             }
         });
 
@@ -106,20 +93,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 yellowCardsA += 1;
-                if (yellowCardsA > yellowCardsB) {
-                    yellowCardsForTeamA.setTextColor(Color.BLACK);
-                    yellowCardsForTeamB.setTextColor(Color.GRAY);
-                } else if (yellowCardsA == yellowCardsB) {
-
-                    yellowCardsForTeamA.setTextColor(Color.BLACK);
-                    yellowCardsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    yellowCardsForTeamA.setTextColor(Color.GRAY);
-                    yellowCardsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayYellowCardsTeamA(yellowCardsA);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(yellowCardsA, yellowCardsB, yellowCardsForTeamA, yellowCardsForTeamB);
+                //Display score on TextView.
+                displayScore(yellowCardsA,yellowCardsForTeamA);
             }
         });
 
@@ -131,20 +108,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 redCardsA += 1;
-                if (redCardsA > redCardsB) {
-                    redCardsForTeamA.setTextColor(Color.BLACK);
-                    redCardsForTeamB.setTextColor(Color.GRAY);
-                } else if (redCardsA == redCardsB) {
-
-                    redCardsForTeamA.setTextColor(Color.BLACK);
-                    redCardsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    redCardsForTeamA.setTextColor(Color.GRAY);
-                    redCardsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayRedCardsTeamA(redCardsA);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(redCardsA, redCardsB, redCardsForTeamA, redCardsForTeamB);
+                //Display score on TextView.
+                displayScore(redCardsA,redCardsForTeamA);
             }
         });
 
@@ -156,20 +123,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 offsidesA += 1;
-                if (offsidesA > offsidesB) {
-                    offsidesForTeamA.setTextColor(Color.BLACK);
-                    offsidesForTeamB.setTextColor(Color.GRAY);
-                } else if (offsidesA == offsidesB) {
-
-                    offsidesForTeamA.setTextColor(Color.BLACK);
-                    offsidesForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    offsidesForTeamA.setTextColor(Color.GRAY);
-                    offsidesForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayOffsidesTeamA(offsidesA);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(offsidesA, offsidesB, offsidesForTeamA, offsidesForTeamB);
+                //Display score on TextView.
+                displayScore(offsidesA,offsidesForTeamA);
             }
         });
         // Get id of TextView cornersForTeamA.
@@ -180,20 +137,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 cornersA += 1;
-                if (cornersA > cornersB) {
-                    cornersForTeamA.setTextColor(Color.BLACK);
-                    cornersForTeamB.setTextColor(Color.GRAY);
-                } else if (cornersA == cornersB) {
-
-                    cornersForTeamA.setTextColor(Color.BLACK);
-                    cornersForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    cornersForTeamA.setTextColor(Color.GRAY);
-                    cornersForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayCornersTeamA(cornersA);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(cornersA, cornersB, cornersForTeamA, cornersForTeamB);
+                //Display score on TextView.
+                displayScore(cornersA,cornersForTeamA);
             }
         });
 
@@ -205,20 +152,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 goalsB += 1;
-                if (goalsA > goalsB) {
-                    goalsForTeamA.setTextColor(Color.BLACK);
-                    goalsForTeamB.setTextColor(Color.GRAY);
-                } else if (goalsA == goalsB) {
-
-                    goalsForTeamA.setTextColor(Color.BLACK);
-                    goalsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    goalsForTeamA.setTextColor(Color.GRAY);
-                    goalsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayGoalsTeamB(goalsB);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(goalsA, goalsB, goalsForTeamA, goalsForTeamB);
+                //Display score on TextView.
+                displayScore(goalsB,goalsForTeamB);
             }
         });
 
@@ -230,20 +167,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 foulsB += 1;
-                if (foulsA > foulsB) {
-                    foulsForTeamA.setTextColor(Color.BLACK);
-                    foulsForTeamB.setTextColor(Color.GRAY);
-                } else if (foulsA == foulsB) {
-
-                    foulsForTeamA.setTextColor(Color.BLACK);
-                    foulsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    foulsForTeamA.setTextColor(Color.GRAY);
-                    foulsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayFoulsTeamB(foulsB);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(foulsA, foulsB, foulsForTeamA, foulsForTeamB);
+                //Display score on TextView.
+                displayScore(foulsB,foulsForTeamB);
             }
         });
 
@@ -255,20 +182,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 yellowCardsB += 1;
-                if (yellowCardsA > yellowCardsB) {
-                    yellowCardsForTeamA.setTextColor(Color.BLACK);
-                    yellowCardsForTeamB.setTextColor(Color.GRAY);
-                } else if (yellowCardsA == yellowCardsB) {
-
-                    yellowCardsForTeamA.setTextColor(Color.BLACK);
-                    yellowCardsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    yellowCardsForTeamA.setTextColor(Color.GRAY);
-                    yellowCardsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayYellowCardsTeamB(yellowCardsB);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(yellowCardsA, yellowCardsB, yellowCardsForTeamA, yellowCardsForTeamB);
+                //Display score on TextView.
+                displayScore(yellowCardsB,yellowCardsForTeamB);
             }
         });
 
@@ -280,20 +197,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 redCardsB += 1;
-                if (redCardsA > redCardsB) {
-                    redCardsForTeamA.setTextColor(Color.BLACK);
-                    redCardsForTeamB.setTextColor(Color.GRAY);
-                } else if (redCardsA == redCardsB) {
-
-                    redCardsForTeamA.setTextColor(Color.BLACK);
-                    redCardsForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    redCardsForTeamA.setTextColor(Color.GRAY);
-                    redCardsForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayRedCardsTeamB(redCardsB);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(redCardsA, redCardsB, redCardsForTeamA, redCardsForTeamB);
+                //Display score on TextView.
+                displayScore(redCardsB,redCardsForTeamB);
             }
         });
 
@@ -305,20 +212,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 offsidesB += 1;
-                if (offsidesA > offsidesB) {
-                    offsidesForTeamA.setTextColor(Color.BLACK);
-                    offsidesForTeamB.setTextColor(Color.GRAY);
-                } else if (offsidesA == offsidesB) {
-
-                    offsidesForTeamA.setTextColor(Color.BLACK);
-                    offsidesForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    offsidesForTeamA.setTextColor(Color.GRAY);
-                    offsidesForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayOffsidesTeamB(offsidesB);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(offsidesA, offsidesB, offsidesForTeamA, offsidesForTeamB);
+                //Display score on TextView.
+                displayScore(offsidesB,offsidesForTeamB);
             }
         });
 
@@ -330,20 +227,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 cornersB += 1;
-                if (cornersA > cornersB) {
-                    cornersForTeamA.setTextColor(Color.BLACK);
-                    cornersForTeamB.setTextColor(Color.GRAY);
-                } else if (cornersA == cornersB) {
-
-                    cornersForTeamA.setTextColor(Color.BLACK);
-                    cornersForTeamB.setTextColor(Color.BLACK);
-
-                } else {
-                    cornersForTeamA.setTextColor(Color.GRAY);
-                    cornersForTeamB.setTextColor(Color.BLACK);
-
-                }
-                displayCornersTeamB(cornersB);
+                //Check the score on each category if is greater than other score, set that score to black color.
+                setTextColor(cornersA, cornersB, cornersForTeamA, cornersForTeamB);
+                //Display score on TextView.
+                displayScore(cornersB,cornersForTeamB);
             }
         });
 
@@ -361,10 +248,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Check the score on each category if is greater than other score, set that score to black color.
+    public void setTextColor(int scoreA, int scoreB, TextView textViewA, TextView textViewB) {
+
+        if (scoreA > scoreB) {
+            textViewA.setTextColor(Color.BLACK);
+            textViewB.setTextColor(Color.GRAY);
+        } else if (scoreA == scoreB) {
+            textViewA.setTextColor(Color.BLACK);
+            textViewB.setTextColor(Color.BLACK);
+        } else {
+            textViewA.setTextColor(Color.GRAY);
+            textViewB.setTextColor(Color.BLACK);
+        }
+    }
+
     // Reset  TextViews, EditText to null and font colors to gray.
     public void resetScore() {
-
-
         goalsA = 0;
         foulsA = 0;
         yellowCardsA = 0;
@@ -379,19 +279,20 @@ public class MainActivity extends AppCompatActivity {
         offsidesB = 0;
         cornersB = 0;
 
-        displayGoalsTeamA(goalsA);
-        displayFoulsTeamA(foulsA);
-        displayYellowCardsTeamA(yellowCardsA);
-        displayRedCardsTeamA(redCardsA);
-        displayOffsidesTeamA(offsidesA);
-        displayCornersTeamA(cornersA);
+        displayScore(goalsA,goalsForTeamA);
+        displayScore(foulsA,foulsForTeamA);
+        displayScore(yellowCardsA,yellowCardsForTeamA);
+        displayScore(redCardsA,redCardsForTeamA);
+        displayScore(offsidesA,offsidesForTeamA);
+        displayScore(cornersA,cornersForTeamA);
 
-        displayGoalsTeamB(goalsB);
-        displayFoulsTeamB(foulsB);
-        displayYellowCardsTeamB(yellowCardsB);
-        displayRedCardsTeamB(redCardsB);
-        displayOffsidesTeamB(offsidesB);
-        displayCornersTeamB(cornersB);
+        displayScore(goalsB,goalsForTeamB);
+        displayScore(foulsB,foulsForTeamB);
+        displayScore(yellowCardsB,yellowCardsForTeamB);
+        displayScore(redCardsB,redCardsForTeamB);
+        displayScore(offsidesB,offsidesForTeamB);
+        displayScore(cornersB,cornersForTeamB);
+
 
         editText1 = findViewById(R.id.EditText1);
         editText2 = findViewById(R.id.EditText2);
@@ -416,101 +317,10 @@ public class MainActivity extends AppCompatActivity {
 
         cornersForTeamA.setTextColor(Color.GRAY);
         cornersForTeamB.setTextColor(Color.GRAY);
-
-
     }
 
-    // Display goals scored in team A.
-    public void displayGoalsTeamA(int score) {
-
-        goalsForTeamA.setText("" + score);
+    // Display score for both teams.
+    public void displayScore(int score, TextView textView) {
+        textView.setText("" + score);
     }
-
-    // Display fouls scored in team A.
-    public void displayFoulsTeamA(int score) {
-
-        foulsForTeamA.setText("" + score);
-    }
-
-    // Display yellow cards scored in team A.
-    public void displayYellowCardsTeamA(int score) {
-
-        yellowCardsForTeamA.setText("" + score);
-    }
-
-    // Display red cards scored in team A.
-    public void displayRedCardsTeamA(int score) {
-
-        redCardsForTeamA.setText("" + score);
-    }
-
-    // Display offsides scored in team A.
-    public void displayOffsidesTeamA(int score) {
-
-        offsidesForTeamA.setText("" + score);
-
-
-    }
-
-    // Display corners scored in team A.
-    public void displayCornersTeamA(int score) {
-
-        cornersForTeamA.setText("" + score);
-    }
-
-    // Display goals scored in team B.
-    public void displayGoalsTeamB(int score) {
-
-        goalsForTeamB.setText("" + score);
-    }
-
-    // Display fouls scored in team B.
-    public void displayFoulsTeamB(int score) {
-
-        foulsForTeamB.setText("" + score);
-    }
-
-    // Display yellow cards scored in team B.
-    public void displayYellowCardsTeamB(int score) {
-
-        yellowCardsForTeamB.setText("" + score);
-    }
-
-    // Display red cards scored in team B.
-    public void displayRedCardsTeamB(int score) {
-
-        redCardsForTeamB.setText("" + score);
-    }
-
-    // Display offsides scored in team B.
-    public void displayOffsidesTeamB(int score) {
-
-        offsidesForTeamB.setText("" + score);
-    }
-
-    // Display corners scored in team B.
-    public void displayCornersTeamB(int score) {
-
-        cornersForTeamB.setText("" + score);
-    }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
