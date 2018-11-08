@@ -14,18 +14,19 @@
     <style name="TextViews">
 
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">casual</item>
+        <item name="android:layout_marginTop">30dp</item>
 
     </style>
 
     <style name="FinalScore">
 
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:layout_marginTop">26dp</item>
+        <item name="android:layout_marginTop">37dp</item>
         <item name="android:fontFamily">casual</item>
         <item name="android:textColor">@color/Black</item>
 

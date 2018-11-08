@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         // Get id of TextView foulsForTeamA.
         foulsForTeamA = findViewById(R.id.scoreFoulsA);
         // Set onClickListener method on TextView.
